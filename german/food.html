@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalkAbroad Conversation Tables - Food</title>
+<style>
+:root{--blue:#006bfd;--navy:#122634;--orange:#d14900;--ink:#20262d;--muted:#68727d;--line:#dfe6ec;--soft:#f4f7f9;--paper:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#edf2f6;color:var(--ink);font-family:Inter,"Helvetica Neue",Arial,sans-serif;line-height:1.42}
+.toolbar{position:sticky;top:0;z-index:20;display:flex;justify-content:center;padding:10px;background:rgba(18,38,52,.96)}
+.toolbar button{border:0;border-radius:999px;padding:9px 17px;background:var(--blue);color:#fff;font:700 14px/1 inherit;cursor:pointer}
+.document{width:min(1080px,calc(100% - 32px));margin:24px auto 48px;background:var(--paper);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(18,38,52,.14)}
+.hero{position:relative;overflow:hidden;padding:24px 40px 20px;background:var(--navy);color:#fff}
+.hero:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;right:-90px;top:-145px;background:var(--blue)}
+.hero:before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:150px;bottom:-62px;background:var(--orange)}
+.brand,.hero-copy{position:relative;z-index:2}.brand{font-size:24px;font-weight:850;letter-spacing:-1.2px;margin-bottom:12px}.brand .talk{color:var(--blue)}
+.eyebrow{margin:0 0 6px;color:#bcd7ff;font-size:12px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+h1{margin:0;max-width:760px;font-size:clamp(28px,4vw,42px);line-height:1.02;letter-spacing:-1.3px}
+.subtitle{margin:9px 0 0;color:#d8e2e8;font-size:16px}.chip{display:inline-flex;margin-top:13px;padding:7px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-weight:700;font-size:13px}
+main{padding:28px 52px 44px}
+.intro-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+.participation-card{position:relative;overflow:hidden;padding:20px;border:0;border-radius:20px;background:var(--navy);color:#fff;box-shadow:0 10px 28px rgba(18,38,52,.12)}
+.participation-card:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-80px;top:-115px;background:var(--blue);opacity:.72}
+.participation-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.participation-panel{padding:15px 16px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.07)}
+.participation-title{position:relative;z-index:1;display:flex;align-items:center;gap:10px;margin:0 0 14px;color:#fff;font-size:21px}
+.participation-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:rgba(255,255,255,.12)}
+.participation-icon svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.participation-panel h3{margin:0 0 7px;color:#fff;font-size:16px;line-height:1.25}
+.participation-panel p{margin:0;color:#d8e2e8;font-size:14px;line-height:1.45}.participation-panel strong{color:#fff}
+.section{margin-top:28px}
+.section-heading{display:flex;align-items:flex-start;gap:12px;margin-bottom:11px}
+.section-icon{flex:0 0 auto;display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:#eaf2ff;color:var(--blue);font-size:14px;font-weight:800}
+.section-heading h2{margin:0;color:var(--navy);font-size:23px;line-height:1.12}
+.section-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.prompt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.prompt{position:relative;min-height:88px;padding:13px 14px 12px 48px;border:1px solid var(--line);border-radius:12px;background:#fff;break-inside:avoid}
+.num{position:absolute;left:13px;top:13px;display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--blue);color:#fff;font-size:11px;font-weight:800}
+.es{margin:0;color:var(--navy);font-size:16px;font-weight:750;line-height:1.25}.en{margin:5px 0 0;color:var(--muted);font-size:12.5px;line-height:1.25}
+.closing{display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:center;margin-top:28px;padding:17px;border-radius:16px;background:var(--navy);color:#fff}
+.closing .section-icon{background:var(--orange);color:#fff}.closing h2{margin:0;font-size:20px}.closing p{margin:3px 0 0;color:#d8e2e8}
+@media(max-width:760px){.document{width:100%;margin:0;border-radius:0}.hero,main{padding-left:22px;padding-right:22px}.participation-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.prompt-grid{grid-template-columns:1fr}}
+@page{size:Letter;margin:.42in}
+@media print{
+body{background:#fff;font-size:10pt}.toolbar{display:none}.document{width:auto;margin:0;box-shadow:none;border-radius:0;overflow:visible}
+.hero{padding:17px 24px 15px}.brand{margin-bottom:8px;font-size:18px}.eyebrow{font-size:7px}h1{font-size:25px;letter-spacing:-.8px}.subtitle{font-size:10px}.chip{margin-top:7px;padding:4px 7px;font-size:7px}
+main{padding:15px 24px 20px}.intro-grid{margin-bottom:12px}
+.participation-card{padding:13px;border-radius:12px;box-shadow:none}.participation-grid{gap:8px}.participation-panel{padding:9px 10px;border-radius:9px}
+.participation-title{margin-bottom:8px;font-size:15px;gap:7px}.participation-icon{width:25px;height:25px;flex-basis:25px;border-radius:7px}.participation-icon svg{width:15px;height:15px}
+.participation-panel h3{font-size:11px;margin-bottom:3px}.participation-panel p{font-size:8.5px;line-height:1.3}
+.section{margin-top:13px}.section-heading{margin-bottom:5px;gap:7px}.section-icon{width:24px;height:24px;border-radius:7px;font-size:9px}.section-heading h2{font-size:14px}.section-heading p{font-size:8px}
+.prompt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 6px}.prompt{min-height:51px;padding:6px 7px 6px 28px;border-radius:7px}
+.num{left:6px;top:6px;width:17px;height:17px;border-radius:5px;font-size:7.5px}.es{font-size:9.5px;line-height:1.18}.en{margin-top:2px;font-size:7.4px;line-height:1.18}
+.closing{margin-top:12px;padding:9px;border-radius:9px}.closing h2{font-size:13px}.closing p{font-size:8px}
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Drucken / Als PDF speichern</button></div>
+<article class="document">
+<header class="hero">
+<div class="brand"><span class="talk">talk</span><span>abroad</span></div>
+<div class="hero-copy">
+<p class="eyebrow">TalkAbroad-Konversationstische</p>
+<h1>TalkAbroad Conversation Tables</h1>
+<p class="subtitle">Thema: Essen · Topic: Food (German)</p>
+<div class="chip">Geführtes zweisprachiges Gespräch</div>
+</div>
+</header>
+<main>
+<section class="intro-grid">
+<div class="participation-card">
+<h2 class="participation-title">
+<span class="participation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 11V5a2 2 0 0 1 4 0v5"/><path d="M12 10V4a2 2 0 0 1 4 0v7"/><path d="M16 10V6a2 2 0 0 1 4 0v7c0 5-3 8-8 8h-1c-3.2 0-5.4-1.5-7-4l-1.5-2.7a2 2 0 0 1 3.4-2.1L8 15"/></svg></span>
+Participation
+</h2>
+<div class="participation-grid">
+<section class="participation-panel">
+<h3>How do I participate in the conversation table?</h3>
+<p>Use the <strong>“Raise your hand”</strong> button under the video. The host will call on you to unmute your microphone and will let as many students participate as possible during the allotted time.</p>
+</section>
+<section class="participation-panel">
+<h3>What if I don’t know how to answer?</h3>
+<p><strong>No worries!</strong> If we call on you and you're not sure how to answer, just stay quiet and we'll move on to someone else. Feel free to answer in the chat if that's easier!</p>
+</section>
+</div>
+</div>
+</section>
+<section class="section"><div class="section-heading"><div class="section-icon">01</div><div><h2>Zum Einstieg</h2><p>Getting Started</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">1</span><p class="es">Wie heißt du?</p><p class="en">What is your name?</p></article><article class="prompt"><span class="num">2</span><p class="es">Woher kommst du?</p><p class="en">Where are you from?</p></article><article class="prompt"><span class="num">3</span><p class="es">Welches Essen magst du?</p><p class="en">What food do you like?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">02</div><div><h2>Deine Vorlieben und täglichen Mahlzeiten</h2><p>Your Preferences and Daily Meals</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">4</span><p class="es">Welches Essen magst du nicht?</p><p class="en">What food do you not like?</p></article><article class="prompt"><span class="num">5</span><p class="es">Wer kocht normalerweise bei dir zu Hause?</p><p class="en">Who usually cooks in your home?</p></article><article class="prompt"><span class="num">6</span><p class="es">Was isst du normalerweise zum Frühstück?</p><p class="en">What do you usually eat for breakfast?</p></article><article class="prompt"><span class="num">7</span><p class="es">Was isst du normalerweise zu Mittag?</p><p class="en">What do you usually eat for lunch?</p></article><article class="prompt"><span class="num">8</span><p class="es">Was isst du normalerweise zu Abend?</p><p class="en">What do you usually eat for dinner?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">03</div><div><h2>Essen in der Familie</h2><p>Eating with Family</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">9</span><p class="es">Welches Essen isst deine Familie gerne zusammen?</p><p class="en">What food does your family like to eat together?</p></article><article class="prompt"><span class="num">10</span><p class="es">Wer kocht normalerweise in deinem Zuhause oder deiner Familie?</p><p class="en">Who usually cooks in your home or family?</p></article><article class="prompt"><span class="num">11</span><p class="es">Wer kauft normalerweise Essen?</p><p class="en">Who usually buys food?</p></article><article class="prompt"><span class="num">12</span><p class="es">Essen die Leute bei dir zu Hause zusammen oder zu unterschiedlichen Zeiten?</p><p class="en">Do people in your home eat together or at different times?</p></article><article class="prompt"><span class="num">13</span><p class="es">Sind Familienmahlzeiten ruhig, hektisch, formell oder entspannt?</p><p class="en">Are family meals quiet, busy, formal, or relaxed?</p></article><article class="prompt"><span class="num">14</span><p class="es">Welches Essen isst du an besonderen Tagen?</p><p class="en">What food do you eat on special days?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">04</div><div><h2>Essen und besondere Anlässe</h2><p>Food and Special Occasions</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">15</span><p class="es">Bringen die Leute Essen zu Familien- oder Gemeinschaftsveranstaltungen mit?</p><p class="en">Do people bring food to family or community events?</p></article><article class="prompt"><span class="num">16</span><p class="es">Welches Essen mögen Kinder in deiner Familie oder Umgebung?</p><p class="en">What food do children in your family or community like?</p></article><article class="prompt"><span class="num">17</span><p class="es">Welches Essen mögen ältere Menschen in deiner Familie oder Umgebung?</p><p class="en">What food do older people in your family or community like?</p></article><article class="prompt"><span class="num">18</span><p class="es">Gibt es ein Essen, das du von deiner Familie gelernt hast zu essen?</p><p class="en">Is there a food you learned to eat from your family?</p></article><article class="prompt"><span class="num">19</span><p class="es">Welches Essen würdest du einem Besucher geben?</p><p class="en">What food would you give to a visitor?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">05</div><div><h2>Essen in deinem Land</h2><p>Food in Your Country</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">20</span><p class="es">Was ist ein Essbrauch in deiner Familie oder Umgebung?</p><p class="en">What is one food custom in your family or community?</p></article><article class="prompt"><span class="num">21</span><p class="es">Welches Essen ist in deinem Land berühmt?</p><p class="en">What food is famous in your country?</p></article><article class="prompt"><span class="num">22</span><p class="es">Welche Mahlzeit oder Essenstradition ist in deinem Land wichtig?</p><p class="en">What meal or food tradition is important in your country?</p></article></div></section>
+<section class="closing"><div class="section-icon">✓</div><div><h2>Abschluss und Verabschiedung.</h2><p>Conclusion and goodbye.</p></div></section>
+</main>
+</article>
+</body>
+</html>
