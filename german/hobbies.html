@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>TalkAbroad Conversation Tables - Hobbies</title>
 <style>
 :root{--blue:#006bfd;--navy:#122634;--orange:#d14900;--ink:#20262d;--muted:#68727d;--line:#dfe6ec;--soft:#f4f7f9;--paper:#fff}
@@ -55,42 +56,103 @@ main{padding:15px 24px 20px}.intro-grid{margin-bottom:12px}
 .num{left:6px;top:6px;width:17px;height:17px;border-radius:5px;font-size:7.5px}.es{font-size:9.5px;line-height:1.18}.en{margin-top:2px;font-size:7.4px;line-height:1.18}
 .closing{margin-top:12px;padding:9px;border-radius:9px}.closing h2{font-size:13px}.closing p{font-size:8px}
 }
+
+
+/* Native-speaker review / edit mode */
+.review-toolbar-wrap{width:min(1080px,100%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.review-toolbar{width:100%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
+.toolbar .toolbar-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:999px;padding:9px 15px;color:#fff;text-decoration:none;font:700 13px/1.15 Inter,"Helvetica Neue",Arial,sans-serif;cursor:pointer;transition:transform .12s ease,opacity .12s ease}
+.toolbar .toolbar-btn:hover{transform:translateY(-1px)}
+.toolbar .toolbar-btn.home{background:#506675}
+.toolbar .toolbar-btn.primary{background:var(--blue)}
+.toolbar .toolbar-btn.secondary{background:#334957}
+.toolbar .toolbar-btn.success{background:#14804a}
+.toolbar .toolbar-btn.download{background:var(--orange)}
+.toolbar .toolbar-btn.reset{background:transparent;border-color:rgba(255,255,255,.35);color:#d8e2e8}
+.persistent-status{min-height:20px;color:#d8e2e8;font-size:13px;font-weight:750;text-align:center;letter-spacing:.01em}
+.persistent-status.editing{color:#8fc5ff}.persistent-status.saved{color:#8fe0b4}.persistent-status.original{color:#d8e2e8}
+.edit-help{display:none;width:min(1080px,calc(100% - 32px));margin:14px auto -8px;padding:12px 16px;border:1px solid #bcd7ff;border-radius:12px;background:#f7faff;color:var(--navy);font-size:13px}
+body.edit-mode .edit-help{display:block}
+body.edit-mode [data-editable="true"]{outline:2px solid rgba(0,107,253,.62);outline-offset:3px;border-radius:5px;background:rgba(234,242,255,.92);cursor:text}
+body.edit-mode .hero [data-editable="true"],body.edit-mode .participation-card [data-editable="true"],body.edit-mode .closing [data-editable="true"]{background:rgba(32,53,69,.96);outline-color:#6fb8ff;box-shadow:0 0 0 4px rgba(0,107,253,.14)}
+body.edit-mode .hero [data-editable="true"],body.edit-mode .participation-card [data-editable="true"],body.edit-mode .closing [data-editable="true"],body.edit-mode .hero [data-editable="true"] *,body.edit-mode .participation-card [data-editable="true"] *,body.edit-mode .closing [data-editable="true"] *{color:inherit!important}
+body.edit-mode [data-editable="true"]:focus{outline:3px solid var(--blue);box-shadow:0 0 0 5px rgba(0,107,253,.15)}
+body.edit-mode .hero [data-editable="true"]:focus,body.edit-mode .participation-card [data-editable="true"]:focus,body.edit-mode .closing [data-editable="true"]:focus{background:rgba(18,38,52,.98);outline-color:#87c4ff;box-shadow:0 0 0 5px rgba(0,107,253,.2)}
+@media(max-width:760px){.review-toolbar{justify-content:center}.toolbar .toolbar-btn{font-size:12px;padding:8px 12px}}
+@media print{.edit-help{display:none!important}body.edit-mode [data-editable="true"]{outline:none!important;background:transparent!important;box-shadow:none!important}}
 </style>
 </head>
 <body>
-<div class="toolbar"><button onclick="window.print()">Drucken / Als PDF speichern</button></div>
+<div class="toolbar"><div class="review-toolbar-wrap"><div aria-live="polite" class="persistent-status" id="saveStatus"></div><div class="review-toolbar"><a class="toolbar-btn home" href="../index.html">Home</a><button class="toolbar-btn primary" id="printBtn" type="button">Print / Save as PDF</button><button class="toolbar-btn secondary" id="editBtn" type="button">Edit</button><button class="toolbar-btn success" hidden="" id="saveBtn" type="button">Save Changes</button><button class="toolbar-btn secondary" hidden="" id="cancelBtn" type="button">Cancel</button><button class="toolbar-btn download" id="downloadBtn" type="button">Download Reviewed Version</button><button class="toolbar-btn reset" id="resetBtn" type="button">Reset to Original</button></div></div></div><div class="edit-help"><strong>Edit mode:</strong> click any outlined text to revise it. “Save Changes” stores edits in this browser. “Download Reviewed Version” creates a corrected copy you can send back.</div>
 <article class="document">
 <header class="hero">
 <div class="brand"><span class="talk">talk</span><span>abroad</span></div>
 <div class="hero-copy">
-<p class="eyebrow">TalkAbroad-Konversationstische</p>
-<h1>TalkAbroad Conversation Tables</h1>
-<p class="subtitle">Thema: Hobbys · Topic: Hobbies (German)</p>
-<div class="chip">Geführtes zweisprachiges Gespräch</div>
+<p class="eyebrow" data-edit-id="edit-001" data-editable="true">TalkAbroad-Konversationstische</p>
+<h1 data-edit-id="edit-002" data-editable="true">TalkAbroad Conversation Tables</h1>
+<p class="subtitle" data-edit-id="edit-003" data-editable="true">Thema: Hobbys · Topic: Hobbies (German)</p>
+<div class="chip" data-edit-id="edit-004" data-editable="true">Geführtes zweisprachiges Gespräch</div>
 </div>
 </header>
 <main>
 <section class="intro-grid">
 <div class="participation-card">
-<h2 class="participation-title">
-<span class="participation-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 11V5a2 2 0 0 1 4 0v5"/><path d="M12 10V4a2 2 0 0 1 4 0v7"/><path d="M16 10V6a2 2 0 0 1 4 0v7c0 5-3 8-8 8h-1c-3.2 0-5.4-1.5-7-4l-1.5-2.7a2 2 0 0 1 3.4-2.1L8 15"/></svg></span>
+<h2 class="participation-title" data-edit-id="edit-005" data-editable="true">
+<span aria-hidden="true" class="participation-icon"><svg viewbox="0 0 24 24"><path d="M8 11V5a2 2 0 0 1 4 0v5"></path><path d="M12 10V4a2 2 0 0 1 4 0v7"></path><path d="M16 10V6a2 2 0 0 1 4 0v7c0 5-3 8-8 8h-1c-3.2 0-5.4-1.5-7-4l-1.5-2.7a2 2 0 0 1 3.4-2.1L8 15"></path></svg></span>
 Participation
 </h2>
 <div class="participation-grid">
 <section class="participation-panel">
-<h3>How do I participate in the conversation table?</h3>
-<p>Use the <strong>“Raise your hand”</strong> button under the video. The host will call on you to unmute your microphone and will let as many students participate as possible during the allotted time.</p>
+<h3 data-edit-id="edit-006" data-editable="true">How do I participate in the conversation table?</h3>
+<p data-edit-id="edit-007" data-editable="true">Use the <strong>“Raise your hand”</strong> button under the video. The host will call on you to unmute your microphone and will let as many students participate as possible during the allotted time.</p>
 </section>
 <section class="participation-panel">
-<h3>What if I don’t know how to answer?</h3>
-<p><strong>No worries!</strong> If we call on you and you're not sure how to answer, just stay quiet and we'll move on to someone else. Feel free to answer in the chat if that's easier!</p>
+<h3 data-edit-id="edit-008" data-editable="true">What if I don’t know how to answer?</h3>
+<p data-edit-id="edit-009" data-editable="true"><strong>No worries!</strong> If we call on you and you're not sure how to answer, just stay quiet and we'll move on to someone else. Feel free to answer in the chat if that's easier!</p>
 </section>
 </div>
 </div>
 </section>
-<section class="section"><div class="section-heading"><div class="section-icon">01</div><div><h2>Zum Einstieg</h2><p>Getting Started</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">1</span><p class="es">Wie heißt du?</p><p class="en">What is your name?</p></article><article class="prompt"><span class="num">2</span><p class="es">Woher kommst du?</p><p class="en">Where are you from?</p></article><article class="prompt"><span class="num">3</span><p class="es">Was machst du gerne in deiner Freizeit?</p><p class="en">What do you like to do for fun?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">02</div><div><h2>Deine Hobbys</h2><p>Your Hobbies</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">4</span><p class="es">Magst du ruhige Hobbys oder aktive Hobbys?</p><p class="en">Do you like quiet hobbies or active hobbies?</p></article><article class="prompt"><span class="num">5</span><p class="es">Mit wem verbringst du deine Freizeit?</p><p class="en">Who do you spend free time with?</p></article><article class="prompt"><span class="num">6</span><p class="es">Welches Hobby macht dir Spaß?</p><p class="en">What hobby do you enjoy?</p></article><article class="prompt"><span class="num">7</span><p class="es">Wann machst du dieses Hobby normalerweise?</p><p class="en">When do you usually do this hobby?</p></article><article class="prompt"><span class="num">8</span><p class="es">Wo machst du dieses Hobby normalerweise?</p><p class="en">Where do you usually do this hobby?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">03</div><div><h2>Familie und Gemeinschaft</h2><p>Family and Community</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">9</span><p class="es">Machst du dieses Hobby alleine oder mit anderen Leuten?</p><p class="en">Do you do this hobby alone or with other people?</p></article><article class="prompt"><span class="num">10</span><p class="es">Wer in deiner Familie hat ein Hobby?</p><p class="en">Who in your family has a hobby?</p></article><article class="prompt"><span class="num">11</span><p class="es">Welche Hobbys machen Kindern in deiner Familie oder Umgebung Spaß?</p><p class="en">What hobbies do children in your family or community enjoy?</p></article><article class="prompt"><span class="num">12</span><p class="es">Welche Hobbys machen älteren Menschen Spaß?</p><p class="en">What hobbies do older people enjoy?</p></article><article class="prompt"><span class="num">13</span><p class="es">Haben die Leute in deiner Umgebung Zeit für Hobbys?</p><p class="en">Do people in your community have time for hobbies?</p></article><article class="prompt"><span class="num">14</span><p class="es">Welche Hobbys kann man in deinem Wohnort leicht machen?</p><p class="en">What hobbies are easy to do where you live?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">04</div><div><h2>Erfahrungen und neue Hobbys</h2><p>Experiences and New Hobbies</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">15</span><p class="es">Welche Hobbys sind schwierig oder teuer?</p><p class="en">What hobbies are difficult or expensive?</p></article><article class="prompt"><span class="num">16</span><p class="es">Lernen die Leute Hobbys von Familienmitgliedern?</p><p class="en">Do people learn hobbies from family members?</p></article><article class="prompt"><span class="num">17</span><p class="es">Hattest du als Kind ein Hobby?</p><p class="en">Did you have a hobby when you were a child?</p></article><article class="prompt"><span class="num">18</span><p class="es">Gibt es ein Hobby, das die Leute bei Familienveranstaltungen machen?</p><p class="en">Is there a hobby people do at family events?</p></article><article class="prompt"><span class="num">19</span><p class="es">Welches Hobby würdest du gerne ausprobieren?</p><p class="en">What hobby would you like to try?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">05</div><div><h2>Hobbys in deinem Land</h2><p>Hobbies in Your Country</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">20</span><p class="es">Welches Hobby ist ein besonderes Hobby in deiner Familie oder Umgebung?</p><p class="en">What hobby is special in your family or community?</p></article><article class="prompt"><span class="num">21</span><p class="es">Welche Hobbys sind in deinem Land beliebt?</p><p class="en">What hobbies are popular in your country?</p></article><article class="prompt"><span class="num">22</span><p class="es">Welches Hobby zeigt etwas über das Leben in deinem Land?</p><p class="en">What hobby shows something about life in your country?</p></article></div></section>
-<section class="closing"><div class="section-icon">✓</div><div><h2>Abschluss und Verabschiedung.</h2><p>Conclusion and goodbye.</p></div></section>
+<section class="section"><div class="section-heading"><div class="section-icon">01</div><div><h2 data-edit-id="edit-010" data-editable="true">Zum Einstieg</h2><p data-edit-id="edit-011" data-editable="true">Getting Started</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">1</span><p class="es" data-edit-id="edit-012" data-editable="true">Wie heißt du?</p><p class="en" data-edit-id="edit-013" data-editable="true">What is your name?</p></article><article class="prompt"><span class="num">2</span><p class="es" data-edit-id="edit-014" data-editable="true">Woher kommst du?</p><p class="en" data-edit-id="edit-015" data-editable="true">Where are you from?</p></article><article class="prompt"><span class="num">3</span><p class="es" data-edit-id="edit-016" data-editable="true">Was machst du gerne in deiner Freizeit?</p><p class="en" data-edit-id="edit-017" data-editable="true">What do you like to do for fun?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">02</div><div><h2 data-edit-id="edit-018" data-editable="true">Deine Hobbys</h2><p data-edit-id="edit-019" data-editable="true">Your Hobbies</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">4</span><p class="es" data-edit-id="edit-020" data-editable="true">Magst du ruhige Hobbys oder aktive Hobbys?</p><p class="en" data-edit-id="edit-021" data-editable="true">Do you like quiet hobbies or active hobbies?</p></article><article class="prompt"><span class="num">5</span><p class="es" data-edit-id="edit-022" data-editable="true">Mit wem verbringst du deine Freizeit?</p><p class="en" data-edit-id="edit-023" data-editable="true">Who do you spend free time with?</p></article><article class="prompt"><span class="num">6</span><p class="es" data-edit-id="edit-024" data-editable="true">Welches Hobby macht dir Spaß?</p><p class="en" data-edit-id="edit-025" data-editable="true">What hobby do you enjoy?</p></article><article class="prompt"><span class="num">7</span><p class="es" data-edit-id="edit-026" data-editable="true">Wann machst du dieses Hobby normalerweise?</p><p class="en" data-edit-id="edit-027" data-editable="true">When do you usually do this hobby?</p></article><article class="prompt"><span class="num">8</span><p class="es" data-edit-id="edit-028" data-editable="true">Wo machst du dieses Hobby normalerweise?</p><p class="en" data-edit-id="edit-029" data-editable="true">Where do you usually do this hobby?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">03</div><div><h2 data-edit-id="edit-030" data-editable="true">Familie und Gemeinschaft</h2><p data-edit-id="edit-031" data-editable="true">Family and Community</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">9</span><p class="es" data-edit-id="edit-032" data-editable="true">Machst du dieses Hobby alleine oder mit anderen Leuten?</p><p class="en" data-edit-id="edit-033" data-editable="true">Do you do this hobby alone or with other people?</p></article><article class="prompt"><span class="num">10</span><p class="es" data-edit-id="edit-034" data-editable="true">Wer in deiner Familie hat ein Hobby?</p><p class="en" data-edit-id="edit-035" data-editable="true">Who in your family has a hobby?</p></article><article class="prompt"><span class="num">11</span><p class="es" data-edit-id="edit-036" data-editable="true">Welche Hobbys machen Kindern in deiner Familie oder Umgebung Spaß?</p><p class="en" data-edit-id="edit-037" data-editable="true">What hobbies do children in your family or community enjoy?</p></article><article class="prompt"><span class="num">12</span><p class="es" data-edit-id="edit-038" data-editable="true">Welche Hobbys machen älteren Menschen Spaß?</p><p class="en" data-edit-id="edit-039" data-editable="true">What hobbies do older people enjoy?</p></article><article class="prompt"><span class="num">13</span><p class="es" data-edit-id="edit-040" data-editable="true">Haben die Leute in deiner Umgebung Zeit für Hobbys?</p><p class="en" data-edit-id="edit-041" data-editable="true">Do people in your community have time for hobbies?</p></article><article class="prompt"><span class="num">14</span><p class="es" data-edit-id="edit-042" data-editable="true">Welche Hobbys kann man in deinem Wohnort leicht machen?</p><p class="en" data-edit-id="edit-043" data-editable="true">What hobbies are easy to do where you live?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">04</div><div><h2 data-edit-id="edit-044" data-editable="true">Erfahrungen und neue Hobbys</h2><p data-edit-id="edit-045" data-editable="true">Experiences and New Hobbies</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">15</span><p class="es" data-edit-id="edit-046" data-editable="true">Welche Hobbys sind schwierig oder teuer?</p><p class="en" data-edit-id="edit-047" data-editable="true">What hobbies are difficult or expensive?</p></article><article class="prompt"><span class="num">16</span><p class="es" data-edit-id="edit-048" data-editable="true">Lernen die Leute Hobbys von Familienmitgliedern?</p><p class="en" data-edit-id="edit-049" data-editable="true">Do people learn hobbies from family members?</p></article><article class="prompt"><span class="num">17</span><p class="es" data-edit-id="edit-050" data-editable="true">Hattest du als Kind ein Hobby?</p><p class="en" data-edit-id="edit-051" data-editable="true">Did you have a hobby when you were a child?</p></article><article class="prompt"><span class="num">18</span><p class="es" data-edit-id="edit-052" data-editable="true">Gibt es ein Hobby, das die Leute bei Familienveranstaltungen machen?</p><p class="en" data-edit-id="edit-053" data-editable="true">Is there a hobby people do at family events?</p></article><article class="prompt"><span class="num">19</span><p class="es" data-edit-id="edit-054" data-editable="true">Welches Hobby würdest du gerne ausprobieren?</p><p class="en" data-edit-id="edit-055" data-editable="true">What hobby would you like to try?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">05</div><div><h2 data-edit-id="edit-056" data-editable="true">Hobbys in deinem Land</h2><p data-edit-id="edit-057" data-editable="true">Hobbies in Your Country</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">20</span><p class="es" data-edit-id="edit-058" data-editable="true">Welches Hobby ist ein besonderes Hobby in deiner Familie oder Umgebung?</p><p class="en" data-edit-id="edit-059" data-editable="true">What hobby is special in your family or community?</p></article><article class="prompt"><span class="num">21</span><p class="es" data-edit-id="edit-060" data-editable="true">Welche Hobbys sind in deinem Land beliebt?</p><p class="en" data-edit-id="edit-061" data-editable="true">What hobbies are popular in your country?</p></article><article class="prompt"><span class="num">22</span><p class="es" data-edit-id="edit-062" data-editable="true">Welches Hobby zeigt etwas über das Leben in deinem Land?</p><p class="en" data-edit-id="edit-063" data-editable="true">What hobby shows something about life in your country?</p></article></div></section>
+<section class="closing"><div class="section-icon">✓</div><div><h2 data-edit-id="edit-064" data-editable="true">Abschluss und Verabschiedung.</h2><p data-edit-id="edit-065" data-editable="true">Conclusion and goodbye.</p></div></section>
 </main>
 </article>
+
+<script id="talkabroad-review-mode">
+(function(){
+const KEY='talkabroad-review-004e34b5dffb775b';
+const body=document.body;
+const editBtn=document.getElementById('editBtn'), saveBtn=document.getElementById('saveBtn'), cancelBtn=document.getElementById('cancelBtn'), printBtn=document.getElementById('printBtn'), downloadBtn=document.getElementById('downloadBtn'), resetBtn=document.getElementById('resetBtn'), saveStatus=document.getElementById('saveStatus');
+const E=()=>Array.from(document.querySelectorAll('[data-editable="true"]'));
+let snapshot={};
+const getMap=()=>Object.fromEntries(E().map(el=>[el.dataset.editId,el.innerHTML]));
+function applyMap(map){if(!map)return;E().forEach(el=>{if(Object.prototype.hasOwnProperty.call(map,el.dataset.editId))el.innerHTML=map[el.dataset.editId]});}
+function setStatus(text,state=''){saveStatus.textContent=text;saveStatus.className='persistent-status'+(state?' '+state:'');}
+function refreshStatus(){if(body.classList.contains('edit-mode')){setStatus('Edit mode is on — make your changes below.','editing');return;}if(localStorage.getItem(KEY)){setStatus('Changes are saved in this browser.','saved');}else{setStatus('Viewing original version.','original');}}
+function enter(){snapshot=getMap();body.classList.add('edit-mode');E().forEach(el=>{el.contentEditable='true';el.spellcheck=true;});editBtn.hidden=true;saveBtn.hidden=false;cancelBtn.hidden=false;refreshStatus();}
+function exit(){body.classList.remove('edit-mode');E().forEach(el=>{el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');});editBtn.hidden=false;saveBtn.hidden=true;cancelBtn.hidden=true;}
+function save(){localStorage.setItem(KEY,JSON.stringify(getMap()));exit();refreshStatus();}
+function cancel(){applyMap(snapshot);exit();refreshStatus();}
+function reset(){if(!localStorage.getItem(KEY)){setStatus('This page is already at the original version.','original');return;}if(confirm('Reset this page to the original version? All saved edits in this browser will be removed.')){localStorage.removeItem(KEY);location.reload();}}
+function removePronunciationRuntime(clone){
+  clone.querySelectorAll('script[src]').forEach(s=>{const src=s.getAttribute('src')||'';if(/kuroshiro|kuromoji|pinyin-pro/i.test(src))s.remove();});
+  clone.querySelectorAll('script:not([src])').forEach(s=>{if(s.id==='talkabroad-review-mode')return;const t=s.textContent||'';if(/Kuroshiro|KuromojiAnalyzer|pinyinPro|data-pinyin-for|data-romaji-for|toRomaji|wordPinyin/i.test(t))s.remove();});
+  clone.querySelectorAll('[data-pinyin-for],[data-romaji-for]').forEach(el=>{el.removeAttribute('data-pinyin-for');el.removeAttribute('data-romaji-for');});
+}
+function download(){
+  if(body.classList.contains('edit-mode')){localStorage.setItem(KEY,JSON.stringify(getMap()));exit();}
+  const pending=Array.from(document.querySelectorAll('.py,.ro,.topic-pinyin,.topic-romaji')).some(el=>/loading|生成拼音|could not load/i.test(el.textContent||''));
+  if(pending && !confirm('Pronunciation text may still be loading. Download the reviewed version anyway?'))return;
+  const clone=document.documentElement.cloneNode(true);clone.querySelector('body')?.classList.remove('edit-mode');clone.querySelectorAll('[contenteditable]').forEach(el=>{el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');});const st=clone.querySelector('#saveStatus');if(st)st.textContent='';removePronunciationRuntime(clone);
+  const blob=new Blob(['<!DOCTYPE html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=(document.title.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()||'talkabroad-reviewed')+'-reviewed.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);refreshStatus();
+}
+function restoreSaved(){try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved)applyMap(saved);}catch(e){console.warn(e);}refreshStatus();}
+restoreSaved();
+// Some Japanese/Chinese pronunciation scripts finish after this review script. Re-apply saved corrections if they overwrite reviewed text.
+if(localStorage.getItem(KEY)){const observer=new MutationObserver(()=>{if(body.classList.contains('edit-mode'))return;let saved=null;try{saved=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}if(saved)applyMap(saved);});E().forEach(el=>observer.observe(el,{childList:true,subtree:true,characterData:true}));setTimeout(()=>observer.disconnect(),30000);}
+printBtn.onclick=()=>window.print();editBtn.onclick=enter;saveBtn.onclick=save;cancelBtn.onclick=cancel;downloadBtn.onclick=download;resetBtn.onclick=reset;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&body.classList.contains('edit-mode'))cancel();});
+})();
+</script>
 </body>
 </html>
