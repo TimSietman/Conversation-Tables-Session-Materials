@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalkAbroad Conversation Tables Review Library</title>
+<style>
+:root{--blue:#006bfd;--navy:#122634;--orange:#d14900;--ink:#20262d;--muted:#68727d;--line:#dfe6ec;--soft:#f4f7f9;--paper:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#edf2f6;color:var(--ink);font-family:Inter,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+.shell{width:min(1180px,calc(100% - 32px));margin:28px auto 60px}
+.hero{position:relative;overflow:hidden;padding:38px 46px 34px;border-radius:26px;background:var(--navy);color:#fff;box-shadow:0 24px 70px rgba(18,38,52,.16)}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-110px;top:-210px;background:var(--blue)}
+.hero:before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:210px;bottom:-78px;background:var(--orange)}
+.brand,.hero-copy{position:relative;z-index:2}
+.brand{font-size:29px;font-weight:850;letter-spacing:-1.4px;margin-bottom:22px}
+.brand .talk{color:var(--blue)}
+.eyebrow{margin:0 0 7px;color:#bcd7ff;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1{margin:0;max-width:820px;font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-2px}
+.hero p{margin:14px 0 0;max-width:760px;color:#d8e2e8;font-size:17px}
+.summary{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.summary span{padding:8px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.07);font-size:13px;font-weight:700}
+.jump-nav{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 0;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.jump-nav a{padding:8px 12px;border-radius:999px;background:#eaf2ff;color:var(--blue);font-size:13px;font-weight:750;text-decoration:none}
+main{display:grid;gap:18px;margin-top:20px}
+.language-card{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 10px 30px rgba(18,38,52,.06)}
+.language-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.language-number{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#eaf2ff;color:var(--blue);font-size:15px;font-weight:850}
+.language-head h2{margin:0;color:var(--navy);font-size:25px;letter-spacing:-.4px}
+.language-head p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.topic-link{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:50px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;color:var(--navy);font-size:14px;font-weight:700;text-decoration:none;transition:.16s ease}
+.topic-link:hover{transform:translateY(-1px);border-color:#bcd7ff;background:#f7faff;box-shadow:0 7px 16px rgba(0,107,253,.08)}
+.arrow{color:var(--blue);font-size:18px}
+.footer{margin-top:20px;padding:18px 22px;border-radius:18px;background:var(--navy);color:#d8e2e8;font-size:13px}
+.footer strong{color:#fff}
+@media(max-width:850px){.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:590px){.shell{width:100%;margin:0}.hero{border-radius:0;padding:30px 22px}.jump-nav,main,.footer{margin-left:16px;margin-right:16px}.topic-grid{grid-template-columns:1fr}.language-card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="hero">
+    <div class="brand"><span class="talk">talk</span><span>abroad</span></div>
+    <div class="hero-copy">
+      <p class="eyebrow">Native Speaker Review Library</p>
+      <h1>Conversation Tables Materials</h1>
+      <p>Use this library to open and review the complete set of beginner Conversation Table materials. Please check the target-language wording, section headings, pronunciation support, and naturalness of each prompt.</p>
+      <div class="summary">
+        <span>7 languages</span>
+        <span>147 topic files</span>
+        <span>HTML review library</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jump-nav" aria-label="Language navigation">
+    <a href="#spanish">Spanish</a><a href="#french">French</a><a href="#portuguese">Portuguese</a><a href="#german">German</a><a href="#italian">Italian</a><a href="#mandarin-chinese">Mandarin Chinese</a><a href="#japanese">Japanese</a>
+  </nav>
+
+  <main>
+    
+    <section class="language-card" id="spanish">
+      <div class="language-head">
+        <div class="language-number">01</div>
+        <div>
+          <h2>Spanish</h2>
+          <p>Spanish-language conversation materials · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="spanish/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="spanish/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="french">
+      <div class="language-head">
+        <div class="language-number">02</div>
+        <div>
+          <h2>French</h2>
+          <p>French-language conversation materials · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="french/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="french/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="french/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="french/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="french/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="french/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="french/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="french/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="french/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="french/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="french/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="french/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="french/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="french/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="french/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="french/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="french/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="french/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="french/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="french/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="french/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="portuguese">
+      <div class="language-head">
+        <div class="language-number">03</div>
+        <div>
+          <h2>Portuguese</h2>
+          <p>Portuguese-language conversation materials · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="portuguese/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="portuguese/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="german">
+      <div class="language-head">
+        <div class="language-number">04</div>
+        <div>
+          <h2>German</h2>
+          <p>German-language conversation materials · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="german/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="german/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="german/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="german/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="german/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="german/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="german/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="german/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="german/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="german/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="german/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="german/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="german/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="german/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="german/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="german/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="german/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="german/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="german/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="german/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="german/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="italian">
+      <div class="language-head">
+        <div class="language-number">05</div>
+        <div>
+          <h2>Italian</h2>
+          <p>Italian-language conversation materials · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="italian/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="italian/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="italian/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="italian/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="italian/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="italian/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="italian/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="italian/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="italian/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="italian/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="italian/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="italian/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="italian/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="italian/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="italian/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="italian/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="italian/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="italian/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="italian/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="italian/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="italian/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="mandarin-chinese">
+      <div class="language-head">
+        <div class="language-number">06</div>
+        <div>
+          <h2>Mandarin Chinese</h2>
+          <p>Mandarin materials with tone-marked, word-segmented pinyin · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="mandarin-chinese/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="mandarin-chinese/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+    <section class="language-card" id="japanese">
+      <div class="language-head">
+        <div class="language-number">07</div>
+        <div>
+          <h2>Japanese</h2>
+          <p>Japanese materials with Hepburn rōmaji · 21 topics</p>
+        </div>
+      </div>
+      <div class="topic-grid"><a class="topic-link" href="japanese/books.html"><span>Books</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/clothing.html"><span>Clothing</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/daily-routine.html"><span>Daily Routine</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/education.html"><span>Education</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/exercise.html"><span>Exercise</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/family.html"><span>Family</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/festivals.html"><span>Festivals</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/food.html"><span>Food</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/hobbies.html"><span>Hobbies</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/jobs-and-work.html"><span>Jobs and Work</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/movies.html"><span>Movies</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/music.html"><span>Music</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/pets-and-animals.html"><span>Pets and Animals</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/places.html"><span>Places</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/shopping.html"><span>Shopping</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/social-media.html"><span>Social Media</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/sports.html"><span>Sports</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/technology.html"><span>Technology</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/transportation.html"><span>Transportation</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/vacations.html"><span>Vacations</span><span class="arrow">→</span></a><a class="topic-link" href="japanese/weather.html"><span>Weather</span><span class="arrow">→</span></a></div>
+    </section>
+    
+  </main>
+
+  <footer class="footer">
+    <strong>Review note:</strong> Open each topic in a new tab or window as needed. The individual materials retain their original responsive and print-friendly formatting.
+  </footer>
+</div>
+</body>
+</html>

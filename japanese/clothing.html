@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalkAbroad Conversation Tables - Clothing</title>
+<style>
+:root{--blue:#006bfd;--navy:#122634;--orange:#d14900;--ink:#20262d;--muted:#68727d;--line:#dfe6ec;--paper:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#edf2f6;color:var(--ink);font-family:Inter,"Noto Sans JP","Yu Gothic","Hiragino Kaku Gothic ProN",Arial,sans-serif;line-height:1.42}
+.toolbar{position:sticky;top:0;z-index:20;display:flex;justify-content:center;padding:10px;background:rgba(18,38,52,.96)}
+.toolbar button{border:0;border-radius:999px;padding:9px 17px;background:var(--blue);color:#fff;font:700 14px/1 inherit;cursor:pointer}
+.document{width:min(1080px,calc(100% - 32px));margin:24px auto 48px;background:var(--paper);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(18,38,52,.14)}
+.hero{position:relative;overflow:hidden;padding:24px 40px 20px;background:var(--navy);color:#fff}
+.hero:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;right:-90px;top:-145px;background:var(--blue)}
+.hero:before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:150px;bottom:-62px;background:var(--orange)}
+.brand,.hero-copy{position:relative;z-index:2}.brand{font-size:24px;font-weight:850;letter-spacing:-1.2px;margin-bottom:12px}.brand .talk{color:var(--blue)}
+.eyebrow{margin:0 0 6px;color:#bcd7ff;font-size:12px;font-weight:800;letter-spacing:.05em}
+h1{margin:0;max-width:760px;font-size:clamp(28px,4vw,42px);line-height:1.02;letter-spacing:-1.3px}
+.subtitle{margin:9px 0 0;color:#d8e2e8;font-size:16px}.topic-romaji{margin:3px 0 0;color:#bcd7ff;font-size:13px;font-style:italic}
+.chip{display:inline-flex;margin-top:13px;padding:7px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-weight:700;font-size:13px}
+main{padding:28px 52px 44px}.intro-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+.participation-card{position:relative;overflow:hidden;padding:20px;border-radius:20px;background:var(--navy);color:#fff}
+.participation-card:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-80px;top:-115px;background:var(--blue);opacity:.72}
+.participation-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px}.participation-panel{padding:15px 16px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.07)}
+.participation-title{position:relative;z-index:1;margin:0 0 14px;font-size:21px}.participation-panel h3{margin:0 0 7px;font-size:16px}.participation-panel p{margin:0;color:#d8e2e8;font-size:14px}
+.section{margin-top:28px}.section-heading{display:flex;gap:12px;margin-bottom:11px}.section-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:#eaf2ff;color:var(--blue);font-size:14px;font-weight:800;flex:0 0 auto}
+.section-heading h2{margin:0;color:var(--navy);font-size:23px;line-height:1.1}.section-romaji{margin:2px 0 0;color:var(--blue);font-size:13px;font-style:italic}.section-heading .en-label{margin:2px 0 0;color:var(--muted);font-size:12px}
+.prompt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}.prompt{position:relative;min-width:0;min-height:102px;padding:13px 14px 12px 48px;border:1px solid var(--line);border-radius:12px;background:#fff;break-inside:avoid}
+.num{position:absolute;left:13px;top:13px;display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--blue);color:#fff;font-size:11px;font-weight:800}
+.ja{margin:0;color:var(--navy);font-size:17px;font-weight:750;line-height:1.3}.ro{
+margin:4px 0 0;
+color:var(--blue);
+font-size:12.5px;
+font-style:italic;
+line-height:1.35;
+white-space:normal;
+overflow-wrap:anywhere;
+word-break:normal;
+max-width:100%;
+}.en{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.25}
+.romaji-error{color:#a64200}.closing{display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:center;margin-top:28px;padding:17px;border-radius:16px;background:var(--navy);color:#fff}.closing .section-icon{background:var(--orange);color:#fff}.closing h2{margin:0;font-size:20px}.closing p{margin:2px 0 0;color:#bcd7ff;font-size:13px}.closing .en{color:#d8e2e8}
+@media(max-width:760px){.document{width:100%;margin:0;border-radius:0}.hero,main{padding-left:22px;padding-right:22px}.participation-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.prompt-grid{grid-template-columns:1fr}}
+@page{size:Letter;margin:.42in}
+@media print{
+body{background:#fff}.toolbar{display:none}.document{width:auto;margin:0;box-shadow:none;border-radius:0}.hero{padding:17px 24px 15px}.brand{font-size:18px;margin-bottom:8px}.eyebrow{font-size:7px}h1{font-size:25px}.subtitle{font-size:10px}.topic-romaji{font-size:8px}.chip{margin-top:7px;padding:4px 7px;font-size:7px}
+main{padding:15px 24px 20px}.intro-grid{margin-bottom:12px}.participation-card{padding:13px;border-radius:12px}.participation-grid{gap:8px}.participation-panel{padding:9px 10px}.participation-title{font-size:15px;margin-bottom:8px}.participation-panel h3{font-size:11px}.participation-panel p{font-size:8.5px}
+.section{margin-top:13px}.section-heading{margin-bottom:5px;gap:7px}.section-icon{width:24px;height:24px;font-size:9px}.section-heading h2{font-size:14px}.section-romaji{font-size:8px}.section-heading .en-label{font-size:7px}
+.prompt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 6px}.prompt{min-height:62px;padding:6px 7px 6px 28px}.num{left:6px;top:6px;width:17px;height:17px;font-size:7.5px}.ja{font-size:10px}.ro{margin-top:2px;font-size:7.4px}.en{margin-top:2px;font-size:7px}.closing{margin-top:12px;padding:9px}.closing h2{font-size:13px}.closing p,.closing .en{font-size:8px}
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/kuroshiro@1.2.0/dist/kuroshiro.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kuroshiro-analyzer-kuromoji@1.1.0/dist/kuroshiro-analyzer-kuromoji.min.js"></script>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">印刷 / PDFとして保存</button></div>
+<article class="document">
+<header class="hero"><div class="brand"><span class="talk">talk</span><span>abroad</span></div>
+<div class="hero-copy"><p class="eyebrow">TalkAbroad 日本語会話テーブル</p><h1>TalkAbroad Conversation Tables</h1>
+<p class="subtitle">テーマ：<span id="topic-ja">1.服</span> · Topic: Clothing (Japanese)</p>
+<p class="topic-romaji" id="topic-romaji">Rōmaji loading…</p><div class="chip">バイリンガル会話ガイド</div></div></header>
+<main><section class="intro-grid"><div class="participation-card"><h2 class="participation-title">Participation</h2>
+<div class="participation-grid"><section class="participation-panel"><h3>How do I participate in the conversation table?</h3><p>Use the <strong>“Raise your hand”</strong> button under the video. The host will call on you to unmute your microphone and will let as many students participate as possible during the allotted time.</p></section>
+<section class="participation-panel"><h3>What if I don’t know how to answer?</h3><p><strong>No worries!</strong> If we call on you and you're not sure how to answer, just stay quiet and we'll move on to someone else. Feel free to answer in the chat if that's easier!</p></section></div></div></section>
+<section class="section"><div class="section-heading"><div class="section-icon">01</div><div><h2>はじめに</h2><p class="section-romaji">Hajime ni</p><p class="en-label">Getting Started</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">1</span><p class="ja">お名前は何ですか?</p><p class="ro" data-romaji-for="お名前は何ですか?">Rōmaji loading…</p><p class="en">What is your name?</p></article><article class="prompt"><span class="num">2</span><p class="ja">出身はどこですか?</p><p class="ro" data-romaji-for="出身はどこですか?">Rōmaji loading…</p><p class="en">Where are you from?</p></article><article class="prompt"><span class="num">3</span><p class="ja">今日、そちらの天気はどうですか?</p><p class="ro" data-romaji-for="今日、そちらの天気はどうですか?">Rōmaji loading…</p><p class="en">What is the weather like where you live today?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">02</div><div><h2>服とスタイル</h2><p class="section-romaji">Fuku to sutairu</p><p class="en-label">Your Clothes and Style</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">4</span><p class="ja">どんな服を着るのが好きですか?</p><p class="ro" data-romaji-for="どんな服を着るのが好きですか?">Rōmaji loading…</p><p class="en">What clothes do you like to wear?</p></article><article class="prompt"><span class="num">5</span><p class="ja">よく着る色やスタイルはありますか?</p><p class="ro" data-romaji-for="よく着る色やスタイルはありますか?">Rōmaji loading…</p><p class="en">What color or style do you wear a lot?</p></article><article class="prompt"><span class="num">6</span><p class="ja">家にいるときは、いつもどんな服を着ていますか?</p><p class="ro" data-romaji-for="家にいるときは、いつもどんな服を着ていますか?">Rōmaji loading…</p><p class="en">What do you usually wear at home?</p></article><article class="prompt"><span class="num">7</span><p class="ja">学校や仕事に行くとき、どんな服を着ますか?</p><p class="ro" data-romaji-for="学校や仕事に行くとき、どんな服を着ますか?">Rōmaji loading…</p><p class="en">What do you usually wear to school, work, or daily activities?</p></article><article class="prompt"><span class="num">8</span><p class="ja">あなたの家族やまわりの人たちは、家の中と外とで服装を変えますか?</p><p class="ro" data-romaji-for="あなたの家族やまわりの人たちは、家の中と外とで服装を変えますか?">Rōmaji loading…</p><p class="en">In your family or community, do people dress differently at home and outside the home?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">03</div><div><h2>家族と特別な行事</h2><p class="section-romaji">Kazoku to tokubetsu na gyōji</p><p class="en-label">Family and Special Occasions</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">9</span><p class="ja">家族のパーティーや、誰かの家に行くときは、どんな服を着ますか?</p><p class="ro" data-romaji-for="家族のパーティーや、誰かの家に行くときは、どんな服を着ますか?">Rōmaji loading…</p><p class="en">What clothes do people wear for family parties or special visits?</p></article><article class="prompt"><span class="num">10</span><p class="ja">家族は誕生日や結婚式、祝日におしゃれをしますか?</p><p class="ro" data-romaji-for="家族は誕生日や結婚式、祝日におしゃれをしますか?">Rōmaji loading…</p><p class="en">Do people in your family dress up for birthdays, weddings, or holidays?</p></article><article class="prompt"><span class="num">11</span><p class="ja">どんな服だと着ていて楽ですか?</p><p class="ro" data-romaji-for="どんな服だと着ていて楽ですか?">Rōmaji loading…</p><p class="en">What clothes are comfortable for you?</p></article><article class="prompt"><span class="num">12</span><p class="ja">あまり着たくない服はありますか?</p><p class="ro" data-romaji-for="あまり着たくない服はありますか?">Rōmaji loading…</p><p class="en">What clothes do you not like to wear?</p></article><article class="prompt"><span class="num">13</span><p class="ja">家族の中で、若い人と年上の人とでは服装のスタイルは違いますか?</p><p class="ro" data-romaji-for="家族の中で、若い人と年上の人とでは服装のスタイルは違いますか?">Rōmaji loading…</p><p class="en">Do young people and older people in your family wear different styles?</p></article><article class="prompt"><span class="num">14</span><p class="ja">家族の中で、服選びを手伝ってくれるのは誰ですか?</p><p class="ro" data-romaji-for="家族の中で、服選びを手伝ってくれるのは誰ですか?">Rōmaji loading…</p><p class="en">Who helps choose clothes in your family?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">04</div><div><h2>ルールと習慣</h2><p class="section-romaji">Rūru to shūkan</p><p class="en-label">Rules and Customs</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">15</span><p class="ja">家族は、服をプレゼントすることがありますか?</p><p class="ro" data-romaji-for="家族は、服をプレゼントすることがありますか?">Rōmaji loading…</p><p class="en">Do people in your family give clothes as gifts?</p></article><article class="prompt"><span class="num">16</span><p class="ja">家族や学校、会社に、服のルールはありますか?</p><p class="ro" data-romaji-for="家族や学校、会社に、服のルールはありますか?">Rōmaji loading…</p><p class="en">Is there a clothing rule in your family, school, work, or community?</p></article><article class="prompt"><span class="num">17</span><p class="ja">家族やまわりの人たちの間で、敬意を表す服はありますか?</p><p class="ro" data-romaji-for="家族やまわりの人たちの間で、敬意を表す服はありますか?">Rōmaji loading…</p><p class="en">Are there clothes that show respect in your family or community?</p></article><article class="prompt"><span class="num">18</span><p class="ja">お祭りや宗教の行事、特別なイベントのときは、どんな服を着ますか?</p><p class="ro" data-romaji-for="お祭りや宗教の行事、特別なイベントのときは、どんな服を着ますか?">Rōmaji loading…</p><p class="en">What clothes do people wear for religious, community, or special events?</p></article><article class="prompt"><span class="num">19</span><p class="ja">家族やまわりの人たちに、服の習慣はありますか?</p><p class="ro" data-romaji-for="家族やまわりの人たちに、服の習慣はありますか?">Rōmaji loading…</p><p class="en">What is one clothing habit in your family or community?</p></article></div></section><section class="section"><div class="section-heading"><div class="section-icon">05</div><div><h2>あなたの国の服装</h2><p class="section-romaji">Anata no kuni no fukusō</p><p class="en-label">Clothing in Your Country</p></div></div><div class="prompt-grid"><article class="prompt"><span class="num">20</span><p class="ja">あなたの町に来る人は、服について何を知っていたらいいですか?</p><p class="ro" data-romaji-for="あなたの町に来る人は、服について何を知っていたらいいですか?">Rōmaji loading…</p><p class="en">What is one thing visitors should know about clothing where you live?</p></article><article class="prompt"><span class="num">21</span><p class="ja">あなたの国では、特別なイベントのときにどんな服を着ますか?</p><p class="ro" data-romaji-for="あなたの国では、特別なイベントのときにどんな服を着ますか?">Rōmaji loading…</p><p class="en">What clothing is common for special events in your country?</p></article><article class="prompt"><span class="num">22</span><p class="ja">あなたの国に伝統的な服はありますか?それはどんなときに着ますか?</p><p class="ro" data-romaji-for="あなたの国に伝統的な服はありますか?それはどんなときに着ますか?">Rōmaji loading…</p><p class="en">Is there traditional clothing in your country? When do people wear it?</p></article></div></section>
+<section class="closing"><div class="section-icon">✓</div><div><h2>まとめとあいさつ</h2><p>Matome to aisatsu</p><p class="en">Conclusion and goodbye.</p></div></section>
+</main></article>
+<script>
+(async function(){
+  function showError(){
+    document.querySelectorAll('[data-romaji-for], #topic-romaji').forEach(function(el){
+      el.textContent = 'Rōmaji could not load. Connect to the internet and refresh.';
+      el.classList.add('romaji-error');
+    });
+  }
+  try {
+    if (!window.Kuroshiro || !window.KuromojiAnalyzer) throw new Error('Libraries unavailable');
+    var KuroshiroClass = window.Kuroshiro.default || window.Kuroshiro;
+    var kuroshiro = new KuroshiroClass();
+    await kuroshiro.init(new KuromojiAnalyzer({
+      dictPath: 'https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict/'
+    }));
+    async function toRomaji(text) {
+      var result = await kuroshiro.convert(text, {
+        to: 'romaji',
+        mode: 'spaced',
+        romajiSystem: 'hepburn'
+      });
+      return result
+        .replace(/\s+/g, ' ')
+        .replace(/\s+([、。，．？！!?])/g, '$1')
+        .replace(/、/g, ', ')
+        .replace(/[。．]/g, '.')
+        .replace(/？/g, '?')
+        .replace(/！/g, '!')
+        .trim();
+    }
+    document.getElementById('topic-romaji').textContent =
+      await toRomaji(document.getElementById('topic-ja').textContent);
+    var items = document.querySelectorAll('[data-romaji-for]');
+    for (var i = 0; i < items.length; i++) {
+      items[i].textContent = await toRomaji(items[i].getAttribute('data-romaji-for'));
+    }
+  } catch (error) {
+    console.error(error);
+    showError();
+  }
+})();
+</script>
+</body></html>
